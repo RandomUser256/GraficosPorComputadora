@@ -1,0 +1,10 @@
+^C:\USERS\MAXIM\ONEDRIVE\DESKTOP\UNIVERSIDAD ICC\3ER SEMESTRE\GRAFICOS POR COMPUTADORA\GLASS TRACER\BUILD\CMAKEFILES\2809A34BBADD0566251F088A8CD0BB7C\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/maxim/OneDrive/Desktop/Universidad ICC/3er semestre/Graficos por computadora/Glass Tracer" "-BC:/Users/maxim/OneDrive/Desktop/Universidad ICC/3er semestre/Graficos por computadora/Glass Tracer/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/maxim/OneDrive/Desktop/Universidad ICC/3er semestre/Graficos por computadora/Glass Tracer/build/GlassTracer.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
