@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\maxim\OneDrive\Documents\GitHub\GraficosPorComputadora\Glass Tracer\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\maxim\OneDrive\Documents\GitHub\GraficosPorComputadora\Glass Tracer\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{5A3A2CB4-D25B-374F-8939-78B20AF6F64E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

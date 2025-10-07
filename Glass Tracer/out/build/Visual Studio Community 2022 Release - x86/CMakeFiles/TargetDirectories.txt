@@ -1,0 +1,3 @@
+C:/Users/maxim/OneDrive/Documents/GitHub/GraficosPorComputadora/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/CMakeFiles/GlassTracer.dir
+C:/Users/maxim/OneDrive/Documents/GitHub/GraficosPorComputadora/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/CMakeFiles/ALL_BUILD.dir
+C:/Users/maxim/OneDrive/Documents/GitHub/GraficosPorComputadora/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/CMakeFiles/ZERO_CHECK.dir
