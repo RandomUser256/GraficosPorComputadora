@@ -12,6 +12,7 @@ class sphere : public hittable {
 
     bool hit(const ray& r, interval ray_t, hit_record& rec) const override {
         vec3 oc = center - r.origin();
+        //a,b, c representan los tres componentes variables en la ecuacion general de una esfera
         auto a = r.direction().length_squared();
         auto h = dot(r.direction(), oc);
         auto c = oc.length_squared() - radius*radius;

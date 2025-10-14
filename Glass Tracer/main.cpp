@@ -19,17 +19,17 @@ int main() {
             auto choose_mat = random_double();
 
             
-            point3 center(a + 0.9*random_double(), 0.2, b + 0.9*random_double());
+            point3 center(a + 0.7*random_double(), 0.3, b + 0.5*random_double());
 
             if ((center - point3(4, 0.2, 0)).length() > 0.9) {
                 shared_ptr<material> sphere_material;
 
-                if (choose_mat < 0.8) {
+                if (choose_mat < 0.6) {
                     // diffuse
                     auto albedo = color::random() * color::random();
                     sphere_material = make_shared<lambertian>(albedo);
                     world.add(make_shared<sphere>(center, 0.2, sphere_material));
-                } else if (choose_mat < 0.95) {
+                } else if (choose_mat < 0.8) {
                     // metal
                     auto albedo = color::random(0.5, 1);
                     auto fuzz = random_double(0, 0.5);
@@ -57,7 +57,7 @@ int main() {
     camera cam;
 
     cam.aspect_ratio      = 16.0 / 9.0;
-    cam.image_width       = 1200;
+    cam.image_width       = 600;
     //Se crean puntos aleatorios dentro de cada pixel cada vez que se renderiza uno
     //Esto permite crear antialiasing que aumenta la calidad, conforme mas se aumenta mas tarda en renderizar
     cam.samples_per_pixel = 10;
