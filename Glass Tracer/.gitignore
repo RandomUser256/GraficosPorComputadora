@@ -1,0 +1,24 @@
+# Ignore CMake build output
+/out/
+/out/*
+
+# CMake internal files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Visual Studio / MSBuild user files and VS folder
+*.vcxproj.user
+*.sln
+.vs/
+
+# Build artifacts
+*.obj
+*.o
+*.exe
+*.dll
+*.pdb
+
+# Misc
+*.log
