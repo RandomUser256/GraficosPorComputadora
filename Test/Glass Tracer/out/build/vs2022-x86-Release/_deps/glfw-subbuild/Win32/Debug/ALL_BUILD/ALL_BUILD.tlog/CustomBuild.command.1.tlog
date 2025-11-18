@@ -1,0 +1,10 @@
+^C:\USERS\FHORT\DESKTOP\TEST\GLASS TRACER\OUT\BUILD\VS2022-X86-RELEASE\_DEPS\GLFW-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-subbuild" "-BC:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-subbuild" --check-stamp-file "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-subbuild/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

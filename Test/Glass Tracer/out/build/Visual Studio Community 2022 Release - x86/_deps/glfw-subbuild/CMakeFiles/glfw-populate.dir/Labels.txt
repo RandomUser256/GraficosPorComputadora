@@ -1,0 +1,14 @@
+# Target labels
+ glfw-populate
+# Source files and their labels
+C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/_deps/glfw-subbuild/CMakeFiles/glfw-populate
+C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/_deps/glfw-subbuild/CMakeFiles/dde367ded0f7fe3b1a67ab93221077a3/glfw-populate.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/_deps/glfw-subbuild/CMakeFiles/7459c3ce1ef89ec9b439b81676e43524/glfw-populate-complete.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/_deps/glfw-subbuild/CMakeFiles/777ea75bc488f51d912e6e497dca46d5/glfw-populate-build.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/_deps/glfw-subbuild/CMakeFiles/777ea75bc488f51d912e6e497dca46d5/glfw-populate-configure.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/_deps/glfw-subbuild/CMakeFiles/777ea75bc488f51d912e6e497dca46d5/glfw-populate-download.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/_deps/glfw-subbuild/CMakeFiles/777ea75bc488f51d912e6e497dca46d5/glfw-populate-install.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/_deps/glfw-subbuild/CMakeFiles/777ea75bc488f51d912e6e497dca46d5/glfw-populate-mkdir.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/_deps/glfw-subbuild/CMakeFiles/777ea75bc488f51d912e6e497dca46d5/glfw-populate-patch.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/_deps/glfw-subbuild/CMakeFiles/777ea75bc488f51d912e6e497dca46d5/glfw-populate-test.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/_deps/glfw-subbuild/CMakeFiles/777ea75bc488f51d912e6e497dca46d5/glfw-populate-update.rule

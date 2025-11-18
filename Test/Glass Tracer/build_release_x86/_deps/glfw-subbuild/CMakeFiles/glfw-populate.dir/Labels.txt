@@ -1,0 +1,14 @@
+# Target labels
+ glfw-populate
+# Source files and their labels
+C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/glfw-populate
+C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/156de7ec162a074422e180fd82d5c99e/glfw-populate.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/839413087d91ba0818e050ab8d106ff8/glfw-populate-complete.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-build.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-configure.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-download.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-install.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-mkdir.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-patch.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-test.rule
+C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-update.rule

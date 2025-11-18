@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\CMakeFiles\56331e9f7a39de1aa057d3f420b5c356\uninstall.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\_deps\glfw-src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\_deps\glfw-build\CMakeFiles\uninstall" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F7230F12-A4F9-3CC7-9198-C4CF11CEDB3F}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

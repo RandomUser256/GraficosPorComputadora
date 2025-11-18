@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-subbuild/CMakeFiles/glfw-populate"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-subbuild/CMakeFiles/0b2d550265a113fb83415063bcaa63a2/glfw-populate.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-subbuild/CMakeFiles/36125a7ba786d4c9896cf7be5409d2bb/glfw-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-subbuild/CMakeFiles/032def494530eda66304fee58120a94e/glfw-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-subbuild/CMakeFiles/032def494530eda66304fee58120a94e/glfw-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-subbuild/CMakeFiles/032def494530eda66304fee58120a94e/glfw-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-subbuild/CMakeFiles/032def494530eda66304fee58120a94e/glfw-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-subbuild/CMakeFiles/032def494530eda66304fee58120a94e/glfw-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-subbuild/CMakeFiles/032def494530eda66304fee58120a94e/glfw-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-subbuild/CMakeFiles/032def494530eda66304fee58120a94e/glfw-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-subbuild/CMakeFiles/032def494530eda66304fee58120a94e/glfw-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glfw-populate"
+		],
+		"name" : "glfw-populate"
+	}
+}

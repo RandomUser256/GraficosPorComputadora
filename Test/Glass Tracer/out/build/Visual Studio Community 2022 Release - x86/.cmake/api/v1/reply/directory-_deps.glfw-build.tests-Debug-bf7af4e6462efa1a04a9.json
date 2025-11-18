@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "_deps/glfw-build/tests",
+		"source" : "out/build/Visual Studio Community 2022 Release - x86/_deps/glfw-src/tests"
+	}
+}

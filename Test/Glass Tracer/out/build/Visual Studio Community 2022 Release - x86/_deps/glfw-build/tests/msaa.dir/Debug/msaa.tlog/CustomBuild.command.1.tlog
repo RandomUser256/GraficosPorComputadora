@@ -1,0 +1,10 @@
+^C:\USERS\FHORT\DESKTOP\TEST\GLASS TRACER\OUT\BUILD\VISUAL STUDIO COMMUNITY 2022 RELEASE - X86\_DEPS\GLFW-SRC\TESTS\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/fhort/Desktop/Test/Glass Tracer" "-BC:/Users/fhort/Desktop/Test/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86" --check-stamp-file "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/Visual Studio Community 2022 Release - x86/_deps/glfw-build/tests/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/glfw-populate"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/156de7ec162a074422e180fd82d5c99e/glfw-populate.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/839413087d91ba0818e050ab8d106ff8/glfw-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/ab6d95515c83838fbcced080b4616ff4/glfw-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glfw-populate"
+		],
+		"name" : "glfw-populate"
+	}
+}

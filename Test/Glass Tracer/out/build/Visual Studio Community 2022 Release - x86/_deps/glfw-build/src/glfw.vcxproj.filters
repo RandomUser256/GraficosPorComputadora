@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\context.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\input.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\monitor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\vulkan.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\window.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\win32_init.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\win32_joystick.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\win32_monitor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\win32_time.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\win32_thread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\win32_window.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\wgl_context.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\egl_context.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\osmesa_context.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\internal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\mappings.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-build\src\glfw_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\include\GLFW\glfw3.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\include\GLFW\glfw3native.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\win32_platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\win32_joystick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\wgl_context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\egl_context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\osmesa_context.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{E0D54C16-B2C2-3538-9903-1693928B45C2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{21BD8B74-0B10-3771-B65B-A6B829FB59B3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

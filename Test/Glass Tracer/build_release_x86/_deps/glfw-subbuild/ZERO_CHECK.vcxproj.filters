@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\_deps\glfw-subbuild\CMakeFiles\156de7ec162a074422e180fd82d5c99e\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{E3053D8D-7814-381C-96E9-224D4CBAEC27}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\CMakeFiles\60d2ea9033c0d79502f49cbdb09e917a\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{046A9E6D-7C8E-3E81-8291-F2B10FEA7018}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

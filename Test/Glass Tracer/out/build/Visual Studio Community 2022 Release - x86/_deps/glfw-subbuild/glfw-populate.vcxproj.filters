@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-subbuild\CMakeFiles\777ea75bc488f51d912e6e497dca46d5\glfw-populate-mkdir.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-subbuild\CMakeFiles\777ea75bc488f51d912e6e497dca46d5\glfw-populate-download.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-subbuild\CMakeFiles\777ea75bc488f51d912e6e497dca46d5\glfw-populate-update.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-subbuild\CMakeFiles\777ea75bc488f51d912e6e497dca46d5\glfw-populate-patch.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-subbuild\CMakeFiles\777ea75bc488f51d912e6e497dca46d5\glfw-populate-configure.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-subbuild\CMakeFiles\777ea75bc488f51d912e6e497dca46d5\glfw-populate-build.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-subbuild\CMakeFiles\777ea75bc488f51d912e6e497dca46d5\glfw-populate-install.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-subbuild\CMakeFiles\777ea75bc488f51d912e6e497dca46d5\glfw-populate-test.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-subbuild\CMakeFiles\7459c3ce1ef89ec9b439b81676e43524\glfw-populate-complete.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-subbuild\CMakeFiles\dde367ded0f7fe3b1a67ab93221077a3\glfw-populate.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-subbuild\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-subbuild\CMakeFiles\glfw-populate" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{049DA015-493D-3C4E-96D9-0BB0BA0F3B77}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

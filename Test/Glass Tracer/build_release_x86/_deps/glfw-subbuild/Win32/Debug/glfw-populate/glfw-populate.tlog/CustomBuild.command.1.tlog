@@ -1,0 +1,150 @@
+^C:\USERS\FHORT\DESKTOP\TEST\GLASS TRACER\BUILD_RELEASE_X86\_DEPS\GLFW-SUBBUILD\CMAKEFILES\AB6D95515C83838FBCCED080B4616FF4\GLFW-POPULATE-MKDIR.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -Dcfgdir=/Debug -P "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-mkdirs.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-mkdir"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\FHORT\DESKTOP\TEST\GLASS TRACER\BUILD_RELEASE_X86\_DEPS\GLFW-SUBBUILD\CMAKEFILES\AB6D95515C83838FBCCED080B4616FF4\GLFW-POPULATE-DOWNLOAD.RULE
+setlocal
+cd "C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\_deps"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-gitclone.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-download"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\FHORT\DESKTOP\TEST\GLASS TRACER\BUILD_RELEASE_X86\_DEPS\GLFW-SUBBUILD\CMAKEFILES\AB6D95515C83838FBCCED080B4616FF4\GLFW-POPULATE-UPDATE.RULE
+setlocal
+cd "C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\_deps\glfw-src"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/glfw-populate-prefix/tmp/glfw-populate-gitupdate.cmake"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\FHORT\DESKTOP\TEST\GLASS TRACER\BUILD_RELEASE_X86\_DEPS\GLFW-SUBBUILD\CMAKEFILES\AB6D95515C83838FBCCED080B4616FF4\GLFW-POPULATE-PATCH.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-patch"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\FHORT\DESKTOP\TEST\GLASS TRACER\BUILD_RELEASE_X86\_DEPS\GLFW-SUBBUILD\CMAKEFILES\AB6D95515C83838FBCCED080B4616FF4\GLFW-POPULATE-CONFIGURE.RULE
+setlocal
+cd "C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\_deps\glfw-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-configure"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\FHORT\DESKTOP\TEST\GLASS TRACER\BUILD_RELEASE_X86\_DEPS\GLFW-SUBBUILD\CMAKEFILES\AB6D95515C83838FBCCED080B4616FF4\GLFW-POPULATE-BUILD.RULE
+setlocal
+cd "C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\_deps\glfw-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-build"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\FHORT\DESKTOP\TEST\GLASS TRACER\BUILD_RELEASE_X86\_DEPS\GLFW-SUBBUILD\CMAKEFILES\AB6D95515C83838FBCCED080B4616FF4\GLFW-POPULATE-INSTALL.RULE
+setlocal
+cd "C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\_deps\glfw-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-install"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\FHORT\DESKTOP\TEST\GLASS TRACER\BUILD_RELEASE_X86\_DEPS\GLFW-SUBBUILD\CMAKEFILES\AB6D95515C83838FBCCED080B4616FF4\GLFW-POPULATE-TEST.RULE
+setlocal
+cd "C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\_deps\glfw-build"
+if %errorlevel% neq 0 goto :cmEnd
+C:
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E echo_append
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-test"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\FHORT\DESKTOP\TEST\GLASS TRACER\BUILD_RELEASE_X86\_DEPS\GLFW-SUBBUILD\CMAKEFILES\839413087D91BA0818E050AB8D106FF8\GLFW-POPULATE-COMPLETE.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -E make_directory "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/Debug"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/Debug/glfw-populate-complete"
+if %errorlevel% neq 0 goto :cmEnd
+"C:\Program Files\CMake\bin\cmake.exe" -E touch "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/glfw-populate-prefix/src/glfw-populate-stamp/Debug/glfw-populate-done"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\FHORT\DESKTOP\TEST\GLASS TRACER\BUILD_RELEASE_X86\_DEPS\GLFW-SUBBUILD\CMAKEFILES\156DE7EC162A074422E180FD82D5C99E\GLFW-POPULATE.RULE
+setlocal
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
+^C:\USERS\FHORT\DESKTOP\TEST\GLASS TRACER\BUILD_RELEASE_X86\_DEPS\GLFW-SUBBUILD\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild" "-BC:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild" --check-stamp-file "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-subbuild/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

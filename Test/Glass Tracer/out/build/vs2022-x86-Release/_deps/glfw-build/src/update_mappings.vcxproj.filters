@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\CMakeFiles\4e3075facc1ea6f3d66dea018b66fe2e\update_mappings.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\src\mappings.h.in">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\CMake\GenerateMappings.cmake" />
+    <None Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\src\CMakeFiles\update_mappings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{2A6089C5-3F87-3362-AC6E-3D0CFEEB41FD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9C0C654C-E19C-32D8-98DE-9D35F890FDE9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

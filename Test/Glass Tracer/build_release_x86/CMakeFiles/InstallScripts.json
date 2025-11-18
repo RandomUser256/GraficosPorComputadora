@@ -1,0 +1,13 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/cmake_install.cmake",
+		"C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/glm-master/cmake_install.cmake",
+		"C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/glm-master/glm/cmake_install.cmake",
+		"C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-build/cmake_install.cmake",
+		"C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-build/src/cmake_install.cmake",
+		"C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-build/examples/cmake_install.cmake",
+		"C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/_deps/glfw-build/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

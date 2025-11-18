@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MinSizeRel|Win32">
+      <Configuration>MinSizeRel</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="RelWithDebInfo|Win32">
+      <Configuration>RelWithDebInfo</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FF1B56A2-BC37-3ACE-9D30-CD5C122B5588}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.26100.0</WindowsTargetPlatformVersion>
+    <Platform>Win32</Platform>
+    <ProjectName>ALL_BUILD</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Building Custom Rule C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/fhort/Desktop/Test/Glass Tracer" "-BC:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release" --check-stamp-file "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Program Files\CMake\share\cmake-4.1\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\cmake_uninstall.cmake.in;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\src\glfw3.pc.in;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\src\glfw3Config.cmake.in;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Building Custom Rule C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/fhort/Desktop/Test/Glass Tracer" "-BC:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release" --check-stamp-file "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Program Files\CMake\share\cmake-4.1\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\cmake_uninstall.cmake.in;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\src\glfw3.pc.in;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\src\glfw3Config.cmake.in;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">Building Custom Rule C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/fhort/Desktop/Test/Glass Tracer" "-BC:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release" --check-stamp-file "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Program Files\CMake\share\cmake-4.1\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\cmake_uninstall.cmake.in;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\src\glfw3.pc.in;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\src\glfw3Config.cmake.in;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|Win32'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">Building Custom Rule C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-src/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/fhort/Desktop/Test/Glass Tracer" "-BC:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release" --check-stamp-file "C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Program Files\CMake\share\cmake-4.1\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakeDependentOption.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckCSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\CheckLibraryExists.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindDoxygen.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\FindThreads.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\Internal\CheckSourceCompiles.cmake;C:\Program Files\CMake\share\cmake-4.1\Modules\WriteBasicConfigVersionFile.cmake;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\cmake_uninstall.cmake.in;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\src\glfw3.pc.in;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\src\glfw3Config.cmake.in;C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\src\glfw_config.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|Win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\ZERO_CHECK.vcxproj">
+      <Project>{64C4D8E8-787C-3FBA-AC3A-AAD983AE7D81}</Project>
+      <Name>ZERO_CHECK</Name>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\examples\boing.vcxproj">
+      <Project>{5A575C67-81AB-3524-81BF-86642C8E18CD}</Project>
+      <Name>boing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\clipboard.vcxproj">
+      <Project>{18CB1B65-C787-34D5-B700-27D080AE3D5F}</Project>
+      <Name>clipboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\cursor.vcxproj">
+      <Project>{B5032633-000D-3946-88C3-B23334004A56}</Project>
+      <Name>cursor</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\empty.vcxproj">
+      <Project>{DC8DF9B7-13D0-30D7-89B6-E049DB67B506}</Project>
+      <Name>empty</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\events.vcxproj">
+      <Project>{584D1991-FB0A-31E9-946B-29172CB6E0EC}</Project>
+      <Name>events</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\gamma.vcxproj">
+      <Project>{F6CF2D6B-8BF9-38AE-901C-E0390246101E}</Project>
+      <Name>gamma</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\examples\gears.vcxproj">
+      <Project>{1262D5DB-C6C3-3DE5-A015-EF723379EE20}</Project>
+      <Name>gears</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\src\glfw.vcxproj">
+      <Project>{31C61A8C-2C2A-3DA7-81A1-AF9838090B38}</Project>
+      <Name>glfw</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\glfwinfo.vcxproj">
+      <Project>{74B59C5B-5E98-3B94-99DC-68A89E56CB84}</Project>
+      <Name>glfwinfo</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\examples\heightmap.vcxproj">
+      <Project>{7F0B35E7-13CF-31BC-A380-1E1402532FA1}</Project>
+      <Name>heightmap</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\icon.vcxproj">
+      <Project>{A899570A-2717-3257-9CC9-D44E40154F74}</Project>
+      <Name>icon</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\iconify.vcxproj">
+      <Project>{1D0B5000-2E7B-3AB4-8539-D106B640EE60}</Project>
+      <Name>iconify</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\inputlag.vcxproj">
+      <Project>{53EE871C-023B-3672-AB33-DB85329D76E5}</Project>
+      <Name>inputlag</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\joysticks.vcxproj">
+      <Project>{B8047F2E-374E-3EAD-B7B0-ADACECACA961}</Project>
+      <Name>joysticks</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\monitors.vcxproj">
+      <Project>{F481ECD0-1B68-3A16-A243-6BA0E42385CB}</Project>
+      <Name>monitors</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\msaa.vcxproj">
+      <Project>{EBDBF686-BD29-3299-A0B2-274D68C4C456}</Project>
+      <Name>msaa</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\examples\offscreen.vcxproj">
+      <Project>{C6EC4319-4846-3C34-B4E8-D095B61FA7E6}</Project>
+      <Name>offscreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\opacity.vcxproj">
+      <Project>{1D3A4A78-BE56-33B1-9799-8BCF7E2711B7}</Project>
+      <Name>opacity</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\examples\particles.vcxproj">
+      <Project>{02F71A64-8545-3BA9-841F-F317126B2418}</Project>
+      <Name>particles</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\reopen.vcxproj">
+      <Project>{BEAB8185-1979-39EC-A04F-0C6EAA1CBAA2}</Project>
+      <Name>reopen</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\examples\sharing.vcxproj">
+      <Project>{3084AC75-638E-31FC-956C-82441FF5E10B}</Project>
+      <Name>sharing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\examples\simple.vcxproj">
+      <Project>{8DA5D7C5-6631-3508-A5CF-A4F683503E98}</Project>
+      <Name>simple</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\examples\splitview.vcxproj">
+      <Project>{9052D828-D0B3-3463-8D99-57BB10918504}</Project>
+      <Name>splitview</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\tearing.vcxproj">
+      <Project>{5A849BF9-9AF0-3591-9FC7-C69EDE2C50DA}</Project>
+      <Name>tearing</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\threads.vcxproj">
+      <Project>{FF8AC7B1-6FBC-34C1-81B4-5D346362FC9C}</Project>
+      <Name>threads</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\timeout.vcxproj">
+      <Project>{3F53B013-83C4-354F-ABB6-51CDE1EC1CE0}</Project>
+      <Name>timeout</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\title.vcxproj">
+      <Project>{91DBFAB4-2A78-32C3-927A-1DAFCC62DB63}</Project>
+      <Name>title</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\triangle-vulkan.vcxproj">
+      <Project>{0374CDCE-AAC1-3862-A51D-96470919A339}</Project>
+      <Name>triangle-vulkan</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\examples\wave.vcxproj">
+      <Project>{303C4118-E5D8-3EC3-A89E-75051ADB8799}</Project>
+      <Name>wave</Name>
+    </ProjectReference>
+    <ProjectReference Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-build\tests\windows.vcxproj">
+      <Project>{E6DC1C52-861F-34E4-A994-E6B8B6100E2A}</Project>
+      <Name>windows</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

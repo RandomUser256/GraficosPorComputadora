@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\tests\events.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\deps\getopt.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\deps\glad_gl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\deps\getopt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\deps\glad\gl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\Visual Studio Community 2022 Release - x86\_deps\glfw-src\tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{E0D54C16-B2C2-3538-9903-1693928B45C2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{21BD8B74-0B10-3771-B65B-A6B829FB59B3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

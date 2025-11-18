@@ -1,0 +1,10 @@
+^C:\USERS\FHORT\DESKTOP\TEST\GLASS TRACER\BUILD_RELEASE_X86\CMAKEFILES\825F7EFAB901D27A2CF04CBA5F17F102\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/fhort/Desktop/Test/Glass Tracer" "-BC:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/fhort/Desktop/Test/Glass Tracer/build_release_x86/GlassTracer.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

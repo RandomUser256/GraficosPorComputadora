@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\CMakeFiles\843a27ac6d31f283aa0a50ad81383190\update_mappings.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\_deps\glfw-src\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\_deps\glfw-src\src\mappings.h.in">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\_deps\glfw-src\CMake\GenerateMappings.cmake" />
+    <None Include="C:\Users\fhort\Desktop\Test\Glass Tracer\build_release_x86\_deps\glfw-build\src\CMakeFiles\update_mappings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{F7230F12-A4F9-3CC7-9198-C4CF11CEDB3F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{49CF65B9-AF9D-3319-8519-1D655B3599A5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

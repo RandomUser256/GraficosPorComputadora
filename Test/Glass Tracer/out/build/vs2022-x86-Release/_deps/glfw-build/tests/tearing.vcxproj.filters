@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\tests\tearing.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\deps\glad_gl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\deps\glad\gl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\fhort\Desktop\Test\Glass Tracer\out\build\vs2022-x86-Release\_deps\glfw-src\tests\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9C0C654C-E19C-32D8-98DE-9D35F890FDE9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{49619898-93AC-3429-94E0-9707AE4D8D71}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,13 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/cmake_install.cmake",
+		"C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/glm-master/cmake_install.cmake",
+		"C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/glm-master/glm/cmake_install.cmake",
+		"C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-build/cmake_install.cmake",
+		"C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-build/src/cmake_install.cmake",
+		"C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-build/examples/cmake_install.cmake",
+		"C:/Users/fhort/Desktop/Test/Glass Tracer/out/build/vs2022-x86-Release/_deps/glfw-build/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
