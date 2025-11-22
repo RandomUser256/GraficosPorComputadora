@@ -5,11 +5,12 @@
 #include "interval.h"
 #include "ray.h"
 
+//Clase que determina una caja delimitadora alineada a los ejes (Axis-Aligned Bounding Box) para determinar agrupaciones de objetos
 class aabb {
   public:
     interval x, y, z;
 
-    aabb() {} // The default AABB is empty, since intervals are empty by default.
+    aabb() {} // Por default esta vacio
 
     aabb(const interval& x, const interval& y, const interval& z) : x(x), y(y), z(z)
     {
@@ -17,9 +18,8 @@ class aabb {
     }
 
     aabb(const point3& a, const point3& b) {
-        // Treat the two points a and b as extrema for the bounding box, so we don't require a
-        // particular minimum/maximum coordinate order.
-
+        // Los puntos a y b definen las esquinas opuestas de la caja delimitadora.
+        // a y b pueden no estar en orden, asi que se asegura de crear los intervalos con el
         x = (a[0] <= b[0]) ? interval(a[0], b[0]) : interval(b[0], a[0]);
         y = (a[1] <= b[1]) ? interval(a[1], b[1]) : interval(b[1], a[1]);
         z = (a[2] <= b[2]) ? interval(a[2], b[2]) : interval(b[2], a[2]);
@@ -27,12 +27,14 @@ class aabb {
         pad_to_minimums();
     }
 
+    //Crea una nueva caja que encierra a las dos cajas dadas
     aabb(const aabb& box0, const aabb& box1) {
         x = interval(box0.x, box1.x);
         y = interval(box0.y, box1.y);
         z = interval(box0.z, box1.z);
     }
 
+    //Retorna el intervalo correspondiente al eje n (0=x, 1=y, 2=z)
     const interval& axis_interval(int n) const {
         if (n == 1) return y;
         if (n == 2) return z;
@@ -43,6 +45,8 @@ class aabb {
         const point3& ray_orig = r.origin();
         const vec3&   ray_dir  = r.direction();
 
+
+        //Determina si el rayo intersecta con la caja delimitadora, utiliza metodo de slabs con AABB
         for (int axis = 0; axis < 3; axis++) {
             const interval& ax = axis_interval(axis);
             const double adinv = 1.0 / ray_dir[axis];

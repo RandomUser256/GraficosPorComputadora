@@ -8,7 +8,8 @@
 #include "hittable_list.h"
 #include "sphere.h"
 
-#include "imgui.h"
+//#include "imgui.h"
+#include "imgui/imgui.h"
 #include <vector>
 #include <memory>
 #include <cstdio>
@@ -54,6 +55,15 @@ struct UIQuad {
     float fuzz_or_ri_or_intensity;
 };
 
+struct UITriangle {
+    float corner_x, corner_y, corner_z;
+    float sideA_x, sideA_y, sideA_z;
+    float sideB_x, sideB_y, sideB_z;
+    int material_type; // 0 = lambertian, 1 = metal, 2 = dielectric, 3 = diffuse_light
+    float r, g, b;
+    float fuzz_or_ri_or_intensity;
+};
+
 // Helper: Create material from UI parameters
 static std::shared_ptr<material> create_material_from_ui(int mat_type, float r, float g, float b, float param) {
     if (mat_type == 1) return std::make_shared<metal>(color(r, g, b), param);
@@ -63,10 +73,11 @@ static std::shared_ptr<material> create_material_from_ui(int mat_type, float r, 
 }
 
 // Load a preset scene into the UI data structures (camera + UI lists).
-static void load_preset(int idx, camera& cam, std::vector<UISphere>& ui_spheres, std::vector<UILight>& ui_lights, std::vector<UIQuad>& ui_quads) {
+static void load_preset(int idx, camera& cam, std::vector<UISphere>& ui_spheres, std::vector<UILight>& ui_lights, std::vector<UIQuad>& ui_quads, std::vector<UITriangle>& ui_triangle) {
     ui_spheres.clear();
     ui_lights.clear();
     ui_quads.clear();
+    ui_triangle.clear();
     // default background for presets
     cam.background = color(0.70, 0.80, 1.00);
 
@@ -116,6 +127,8 @@ static void load_preset(int idx, camera& cam, std::vector<UISphere>& ui_spheres,
         ui_quads.push_back(UIQuad{3.0f,-2.0f,1.0f, 0.0f,0.0f,4.0f, 0.0f,4.0f,0.0f, 0, 0.2f,0.2f,1.0f, 0.0f}); // right_blue
         ui_quads.push_back(UIQuad{-2.0f,3.0f,1.0f, 4.0f,0.0f,0.0f, 0.0f,0.0f,4.0f, 0, 1.0f,0.5f,0.0f, 0.0f}); // upper_orange
         ui_quads.push_back(UIQuad{-2.0f,-3.0f,5.0f, 4.0f,0.0f,0.0f, 0.0f,0.0f,-4.0f, 0, 0.2f,0.8f,0.8f, 0.0f}); // lower_teal
+        ui_triangle.push_back(UITriangle{0.0f,0.0f,0.0f, 2.0f,0.0f,0.0f, 0.0f,2.0f,0.0f, 0, 1.0f,1.0f,0.0f, 0.0f}); // yellow triangle
+        
         break;
     case 6: // simple_light
         cam.aspect_ratio = 16.0/9.0; cam.image_width = 400; cam.samples_per_pixel = 100; cam.max_depth = 50; cam.background = color(0,0,0);
@@ -161,7 +174,7 @@ static void load_preset(int idx, camera& cam, std::vector<UISphere>& ui_spheres,
     }
 }
 
-static void show_scene_editor(hittable_list& world, camera& cam, std::vector<UISphere>& ui_spheres, std::vector<UILight>& ui_lights, std::vector<UIQuad>& ui_quads, bool& request_render) {
+static void show_scene_editor(hittable_list& world, camera& cam, std::vector<UISphere>& ui_spheres, std::vector<UILight>& ui_lights, std::vector<UIQuad>& ui_quads, std::vector<UITriangle>& ui_triangles, bool& request_render) {
     ImGui::Begin("Scene Editor");
 
     // Preset scenes selection
@@ -181,7 +194,7 @@ static void show_scene_editor(hittable_list& world, camera& cam, std::vector<UIS
     ImGui::SameLine();
     if (ImGui::Button("Load Preset")) {
         if (preset_idx > 0) {
-            load_preset(preset_idx, cam, ui_spheres, ui_lights, ui_quads);
+            load_preset(preset_idx, cam, ui_spheres, ui_lights, ui_quads, ui_triangles);
         }
     }
 
@@ -258,6 +271,24 @@ static void show_scene_editor(hittable_list& world, camera& cam, std::vector<UIS
         ImGui::PopID();
     }
 
+    if (ImGui::CollapsingHeader("Add new triangle", ImGuiTreeNodeFlags_DefaultOpen)) {
+        ImGui::PushID("new_triangle");
+        static UITriangle new_triangle = {0.0f, 0.0f, -1.0f, 1.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f, 0, 0.7f, 0.6f, 0.5f, 0.0f};
+        ImGui::InputFloat3("Corner##triangle", &new_triangle.corner_x);
+        ImGui::InputFloat3("Side A##triangle", &new_triangle.sideA_x);
+        ImGui::InputFloat3("Side B##triangle", &new_triangle.sideB_x);
+        ImGui::ColorEdit3("Color##triangle", &new_triangle.r);
+        ImGui::Combo("Material##triangle", &new_triangle.material_type, "Lambertian\0Metal\0Dielectric\0Diffuse Light\0");
+        if (new_triangle.material_type == 1) ImGui::InputFloat("Fuzz##triangle", &new_triangle.fuzz_or_ri_or_intensity);
+        if (new_triangle.material_type == 2) ImGui::InputFloat("Refraction idx##triangle", &new_triangle.fuzz_or_ri_or_intensity);
+        if (new_triangle.material_type == 3) ImGui::InputFloat("Intensity##triangle", &new_triangle.fuzz_or_ri_or_intensity);
+
+        if (ImGui::Button("Add Triangle")) {
+            ui_triangles.push_back(new_triangle);
+        }
+        ImGui::PopID();
+    }
+
     // List & edit existing quads
     if (ui_quads.size() > 0) {
         ImGui::Separator();
@@ -281,6 +312,35 @@ static void show_scene_editor(hittable_list& world, camera& cam, std::vector<UIS
                     ImGui::TreePop();
                     ImGui::PopID();
                     break;
+                }
+                ImGui::TreePop();
+            }
+            ImGui::PopID();
+        }
+    }
+    // List & edit existing triangles (mirror of quads)
+    if (ui_triangles.size() > 0) {
+        ImGui::Separator();
+        ImGui::Text("Triangles in scene: %d", (int)ui_triangles.size());
+        for (int i = 0; i < (int)ui_triangles.size(); ++i) {
+            char label[64];
+            sprintf_s(label, sizeof(label), "Triangle %d", i);
+            ImGui::PushID(200 + i);  // offset to avoid conflicts with other lists
+            if (ImGui::TreeNode(label)) {
+                ImGui::InputFloat3("Corner", &ui_triangles[i].corner_x);
+                ImGui::InputFloat3("Side A", &ui_triangles[i].sideA_x);
+                ImGui::InputFloat3("Side B", &ui_triangles[i].sideB_x);
+                ImGui::ColorEdit3("Color", &ui_triangles[i].r);
+                ImGui::Combo("Material", &ui_triangles[i].material_type, "Lambertian\0Metal\0Dielectric\0Diffuse Light\0");
+                if (ui_triangles[i].material_type == 1) ImGui::InputFloat("Fuzz", &ui_triangles[i].fuzz_or_ri_or_intensity);
+                if (ui_triangles[i].material_type == 2) ImGui::InputFloat("Refraction idx", &ui_triangles[i].fuzz_or_ri_or_intensity);
+                if (ui_triangles[i].material_type == 3) ImGui::InputFloat("Intensity", &ui_triangles[i].fuzz_or_ri_or_intensity);
+
+                if (ImGui::Button("Remove")) {
+                    ui_triangles.erase(ui_triangles.begin() + i);
+                    ImGui::TreePop();
+                    ImGui::PopID();
+                    break; // indices shifted, restart loop next frame
                 }
                 ImGui::TreePop();
             }
@@ -360,6 +420,16 @@ static void show_scene_editor(hittable_list& world, camera& cam, std::vector<UIS
                                             mat));
         }
 
+        // Add triangles to the world
+        for (auto &t : ui_triangles) {
+            std::shared_ptr<material> mat = create_material_from_ui(t.material_type, t.r, t.g, t.b, t.fuzz_or_ri_or_intensity);
+            world.add(std::make_shared<tri>(point3(t.corner_x, t.corner_y, t.corner_z),
+                                            vec3(t.sideA_x, t.sideA_y, t.sideA_z),
+                                            vec3(t.sideB_x, t.sideB_y, t.sideB_z),
+                                            mat));
+        }
+
+
         // Serialize simple scene file next to the executable (scene.txt)
         std::string exeFolder = ".";
 #ifdef _WIN32
@@ -402,6 +472,17 @@ static void show_scene_editor(hittable_list& world, camera& cam, std::vector<UIS
                     << q.material_type << " " << q.r << " " << q.g << " " << q.b << " " << q.fuzz_or_ri_or_intensity << "\n";
             }
 
+            // Triangles
+            out << ui_triangles.size() << "\n";
+            for (auto &t : ui_triangles) {
+                out << t.corner_x << " " << t.corner_y << " " << t.corner_z << " "
+                    << t.sideA_x << " " << t.sideA_y << " " << t.sideA_z << " "
+                    << t.sideB_x << " " << t.sideB_y << " " << t.sideB_z << " "
+                    << t.material_type << " " << t.r << " " << t.g << " " << t.b << " " << t.fuzz_or_ri_or_intensity << "\n";
+            }
+
+            
+
             out.close();
         }
 
@@ -425,6 +506,15 @@ static void show_scene_editor(hittable_list& world, camera& cam, std::vector<UIS
             world.add(std::make_shared<quad>(point3(q.corner_x, q.corner_y, q.corner_z),
                                             vec3(q.sideA_x, q.sideA_y, q.sideA_z),
                                             vec3(q.sideB_x, q.sideB_y, q.sideB_z),
+                                            mat));
+        }
+        
+        // Add triangles for Render (blocking)
+        for (auto &t : ui_triangles) {
+            std::shared_ptr<material> mat = create_material_from_ui(t.material_type, t.r, t.g, t.b, t.fuzz_or_ri_or_intensity);
+            world.add(std::make_shared<tri>(point3(t.corner_x, t.corner_y, t.corner_z),
+                                            vec3(t.sideA_x, t.sideA_y, t.sideA_z),
+                                            vec3(t.sideB_x, t.sideB_y, t.sideB_z),
                                             mat));
         }
         // Set this flag for the main loop to call cam.render(world).
@@ -497,6 +587,19 @@ int main(int argc, char* argv[]) {
             world.add(std::make_shared<quad>(point3(cx, cy, cz), vec3(sax, say, saz), vec3(sbx, sby, sbz), mat));
         }
 
+        int triangle_count = 0;
+        in >> triangle_count;
+        for (int q = 0; q < triangle_count; ++q) {
+            double cx, cy, cz, sax, say, saz, sbx, sby, sbz;
+            int mat_type;
+            double r, g, b, param;
+            in >> cx >> cy >> cz >> sax >> say >> saz >> sbx >> sby >> sbz >> mat_type >> r >> g >> b >> param;
+            std::shared_ptr<material> mat = create_material_from_ui(mat_type, (float)r, (float)g, (float)b, (float)param);
+            world.add(std::make_shared<tri>(point3(cx, cy, cz), vec3(sax, say, saz), vec3(sbx, sby, sbz), mat));
+        }
+
+        
+
         // Set working directory to exe folder is handled by parent process when launching CreateProcess with lpCurrentDirectory
         cam.render(world);
         return 0;
@@ -542,6 +645,7 @@ int main(int argc, char* argv[]) {
     std::vector<UISphere> ui_spheres;
     std::vector<UILight> ui_lights;
     std::vector<UIQuad> ui_quads;
+    std::vector<UITriangle> ui_triangles;
     bool request_render = false;
 
     // Add a default light above the camera if none exist
@@ -566,7 +670,7 @@ int main(int argc, char* argv[]) {
         ImGui::NewFrame();
 
     // Show the scene editor
-    show_scene_editor(world, cam, ui_spheres, ui_lights, ui_quads, request_render);
+    show_scene_editor(world, cam, ui_spheres, ui_lights, ui_quads, ui_triangles, request_render);
 
         // Handle render request: if set by Apply button, close GUI and launch headless renderer
         if (request_render) {

@@ -78,7 +78,7 @@ class quad : public hittable {
     aabb bbox;
 };
 
-
+//Funcion que genera una caja 3D a partir de dos vertices opuestos (crea una instancias de "quad" para cada cara)
 inline shared_ptr<hittable_list> box(const point3& a, const point3& b, shared_ptr<material> mat)
 {
     // Returns the 3D box (six sides) that contains the two opposite vertices a & b.
@@ -103,7 +103,7 @@ inline shared_ptr<hittable_list> box(const point3& a, const point3& b, shared_pt
     return sides;
 }
 
-
+//Clase heredada de "quad" que genera un triangulo a partir de un vertice y dos lados
 class tri : public quad {
   public:
     tri(const point3& o, const vec3& aa, const vec3& ab, shared_ptr<material> m)

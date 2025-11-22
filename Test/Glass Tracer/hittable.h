@@ -8,19 +8,27 @@ class material;
 
 class hit_record {
   public:
+  //Punto de interseccion
     point3 p;
+
     vec3 normal;
+    
+    //Material con el que intersecta
     shared_ptr<material> mat;
+
+    //Punto t para indicar intervalo valido de interseccion
     double t;
+
+    //Indica si el rayo golpea la cara frontal (hacia el exterior) o trasera de la superficie
     bool front_face;
 
-    //Surface coordinates
+    //Coordenadas de sueprficie
     double u;
     double v;
 
     void set_face_normal(const ray& r, const vec3& outward_normal) {
-        // Sets the hit record normal vector.
-        // NOTE: the parameter `outward_normal` is assumed to have unit length.
+        // Establce el vector normal de esta intersección.
+        // NOTE: El parameter `outward_normal` se asume que es de longitud unitaria.
 
         front_face = dot(r.direction(), outward_normal) < 0;
         normal = front_face ? outward_normal : -outward_normal;
@@ -36,6 +44,7 @@ class hittable {
     virtual aabb bounding_box() const = 0;
 };
 
+//Clase para objetos en movimiento o traslacion
 class translate : public hittable {
   public:
   translate(shared_ptr<hittable> object, const vec3& offset)
@@ -45,14 +54,15 @@ class translate : public hittable {
     }
 
     bool hit(const ray& r, interval ray_t, hit_record& rec) const override {
-        // Move the ray backwards by the offset
+        // Calcula posicion hacia atras de acuerdo al offset del objeto
+        //Permite determinar si hay interseccion con el objeto sobre la linea de trayectoria del objeto
         ray offset_r(r.origin() - offset, r.direction(), r.time());
 
         // Determine whether an intersection exists along the offset ray (and if so, where)
         if (!object->hit(offset_r, ray_t, rec))
             return false;
 
-        // Move the intersection point forwards by the offset
+        // Mueve el punto de intersección hacia adelante de acuerdo al offset
         rec.p += offset;
 
         return true;
@@ -66,6 +76,7 @@ class translate : public hittable {
     aabb bbox;
 };
 
+//Clase para rotar objetos alrededor del eje Y
 class rotate_y : public hittable {
   public:
     rotate_y(shared_ptr<hittable> object, double angle) : object(object) {
@@ -125,7 +136,6 @@ class rotate_y : public hittable {
             return false;
 
         // Transform the intersection from object space back to world space.
-
         rec.p = point3(
             (cos_theta * rec.p.x()) + (sin_theta * rec.p.z()),
             rec.p.y(),

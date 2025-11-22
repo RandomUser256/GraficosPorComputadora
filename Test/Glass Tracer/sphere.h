@@ -30,12 +30,15 @@ class sphere : public hittable {
     bool hit(const ray& r, interval ray_t, hit_record& rec) const override {
         point3 current_center = center.at(r.time());
         vec3 oc = current_center - r.origin();
+
         //a,b, c representan los tres componentes variables en la ecuacion general de una esfera
         auto a = r.direction().length_squared();
         auto h = dot(r.direction(), oc);
         auto c = oc.length_squared() - radius*radius;
 
         auto discriminant = h*h - a*c;
+
+        //No hay intersecciones reales
         if (discriminant < 0)
             return false;
 
@@ -68,6 +71,7 @@ class sphere : public hittable {
     shared_ptr<material> mat;
     aabb bbox;
 
+    //Retorna las coordenadas UV (para aplicar texturas a objetos) de la esfera en un punto dado
     static void get_sphere_uv(const point3& p, double& u, double& v) {
         // p: a given point on the sphere of radius one, centered at the origin.
         // u: returned value [0,1] of angle around the Y axis from X=-1.

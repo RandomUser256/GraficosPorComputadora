@@ -33,7 +33,10 @@ class lambertian : public material {
         if (scatter_direction.near_zero())
             scatter_direction = rec.normal;
 
+        //Crea rayo reflejado con direccion aleatoria
         scattered = ray(rec.p, scatter_direction, r_in.time());
+
+        // Establece la atenuacion del color basado en el material
         attenuation = tex->value(rec.u, rec.v, rec.p);
         return true;
     }
@@ -49,11 +52,19 @@ class metal : public material {
     //Calcula el rebote de luz sobre una superficie metalica
     bool scatter(const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered)
     const override {
-        //Para metales esto es un reflejo sencillo
+        //Para metales esto es un reflejo puntual en una direccion dada
         vec3 reflected = reflect(r_in.direction(), rec.normal);
+
+        //Difumina el reflejo dependiendo del valor de "fuzz" del metal
         reflected = unit_vector(reflected) + (fuzz * random_unit_vector());
-         scattered = ray(rec.p, reflected, r_in.time());
+
+        //Crea y guarda el rayo reflejado con la direccion calculada
+        scattered = ray(rec.p, reflected, r_in.time());
+
+        //Determina cantidad de luz que refleja el metal
         attenuation = albedo;
+
+        //Si el producto punto es mayor a 0, significa que el rayo se refleja hacia afuera de la superficie
         return (dot(scattered.direction(), rec.normal) > 0);
     }
 
@@ -67,22 +78,29 @@ class dielectric : public material {
   public:
     dielectric(double refraction_index) : refraction_index(refraction_index) {}
 
-    //Para el rebote de un material dialectrico, se refracta utilizando Schnell's law
+    //Para el rebote de un material dialectrico, se refracta utilizando la ley de Snell
     bool scatter(const ray& r_in, const hit_record& rec, color& attenuation, ray& scattered)
     const override {
         attenuation = color(1.0, 1.0, 1.0);
+
+        //Determina si la luz entra o sale del material para aplicar la ley de Snell correctamente
         double ri = rec.front_face ? (1.0/refraction_index) : refraction_index;
 
         vec3 unit_direction = unit_vector(r_in.direction());
-         double cos_theta = std::fmin(dot(-unit_direction, rec.normal), 1.0);
+
+
+        double cos_theta = std::fmin(dot(-unit_direction, rec.normal), 1.0);
         double sin_theta = std::sqrt(1.0 - cos_theta*cos_theta);
 
+        //Detecta angulos criticos donde no es posible aplicar la ley de Snell
         bool cannot_refract = ri * sin_theta > 1.0;
+
         vec3 direction;
 
         //Considera excepciones a la ley de Schnell
          if (cannot_refract || reflectance(cos_theta, ri) > random_double())
             direction = reflect(unit_direction, rec.normal);
+        //Aplicacion de la ley de Snell
         else
             direction = refract(unit_direction, rec.normal, ri);
 

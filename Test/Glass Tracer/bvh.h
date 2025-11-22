@@ -7,6 +7,9 @@
 
 #include <algorithm>
 
+
+//Clase para el Bounding Volume Hierarchy (BVH) para acelerar las consultas de interseccion de rayos con objetos
+// Esta clase define cada nodo en el arbol de jerarquia en la escena, esta misma clase referencia otros nodos para formar la estructura de arbol
 class bvh_node : public hittable {
   public:
     bvh_node(hittable_list list) : bvh_node(list.objects, 0, list.objects.size()) {
@@ -19,9 +22,13 @@ class bvh_node : public hittable {
     bvh_node(std::vector<shared_ptr<hittable>>& objects, size_t start, size_t end) {
         // Build the bounding box of the span of source objects.
         bbox = aabb::empty;
+
+        // Construye la caja delimitadora del rango de objetos fuente.
         for (size_t object_index=start; object_index < end; object_index++)
             bbox = aabb(bbox, objects[object_index]->bounding_box());
 
+        
+        //Se elige el eje mas largo de la caja delimitadora para dividir los objetos (tendra mayores subdivisiones)
         int axis = bbox.longest_axis();
 
         auto comparator = (axis == 0) ? box_x_compare
@@ -39,6 +46,8 @@ class bvh_node : public hittable {
             std::sort(std::begin(objects) + start, std::begin(objects) + end, comparator);
 
             auto mid = start + object_span/2;
+
+            //Crea los dos nodos hijos recursivamente, subsecuentemente haciendo mas chiquitas las cajas
             left = make_shared<bvh_node>(objects, start, mid);
             right = make_shared<bvh_node>(objects, mid, end);
         }
@@ -63,6 +72,7 @@ class bvh_node : public hittable {
     shared_ptr<hittable> right;
     aabb bbox;
 
+    //Compara si una caja es menor a otro en un eje dado
     static bool box_compare(
         const shared_ptr<hittable> a, const shared_ptr<hittable> b, int axis_index
     ) {
@@ -71,6 +81,7 @@ class bvh_node : public hittable {
         return a_axis_interval.min < b_axis_interval.min;
     }
 
+    //Instancias de "box_compare" para cada eje
     static bool box_x_compare (const shared_ptr<hittable> a, const shared_ptr<hittable> b) {
         return box_compare(a, b, 0);
     }

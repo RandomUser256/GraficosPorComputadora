@@ -5,6 +5,7 @@
 #include "material.h"
 #include "texture.h"
 
+//Define objetos que tienen propiedades de humo, neblina, etc.
 class constant_medium : public hittable {
   public:
     constant_medium(shared_ptr<hittable> boundary, double density, shared_ptr<texture> tex)
@@ -45,9 +46,9 @@ class constant_medium : public hittable {
         rec.t = rec1.t + hit_distance / ray_length;
         rec.p = r.at(rec.t);
 
-        rec.normal = vec3(1,0,0);  // arbitrary
-        rec.front_face = true;     // also arbitrary
-        rec.mat = phase_function;
+        rec.normal = vec3(1,0,0);  // No es importante para este tipo de material
+        rec.front_face = true;     // Tampoco es relevante
+        rec.mat = phase_function; // Define tipo de material
 
         return true;
     }

@@ -25,6 +25,7 @@ class hittable_list : public hittable {
         bool hit_anything = false;
         auto closest_so_far = ray_t.max;
 
+        //Cicla todos los objetos en la lista para determinar si hay interseccion con alguno
         for (const auto& object : objects) {
              if (object->hit(r, interval(ray_t.min, closest_so_far), temp_rec)) { //LLama la funcion hit() sobrecargada dependiendo del tipo de subclase de "hittable" que se llame
                 hit_anything = true;

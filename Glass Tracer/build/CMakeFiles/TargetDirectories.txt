@@ -1,3 +1,0 @@
-C:/Users/maxim/OneDrive/Desktop/Universidad ICC/3er semestre/Graficos por computadora/Glass Tracer/build/CMakeFiles/GlassTracer.dir
-C:/Users/maxim/OneDrive/Desktop/Universidad ICC/3er semestre/Graficos por computadora/Glass Tracer/build/CMakeFiles/ALL_BUILD.dir
-C:/Users/maxim/OneDrive/Desktop/Universidad ICC/3er semestre/Graficos por computadora/Glass Tracer/build/CMakeFiles/ZERO_CHECK.dir

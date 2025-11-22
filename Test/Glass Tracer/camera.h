@@ -12,13 +12,13 @@ class camera {
     int    image_width  = 100;  // Rendered image width in pixel count
     int    samples_per_pixel = 10;   // Count of random samples for each pixel
     int    max_depth         = 10;   // Maximum number of ray bounces into scene
-    color  background = color(0.70, 0.80, 1.00);               // Scene background color (default sky)
+    color  background = color(0.70, 0.80, 1.00);               // Color de fondo de la escena (azul cielo)
 
 
     double vfov = 90;  // Vertical view angle (field of view)
     point3 lookfrom = point3(0,0,0);   // Point camera is looking from
     point3 lookat   = point3(0,0,-1);  // Point camera is looking at
-    vec3   vup      = vec3(0,1,0);     // Camera-relative "up" direction
+    vec3   vup      = vec3(0,1,0);     // Direccion hacia arriba respecto a la camara
 
     double defocus_angle = 0;  // Variation angle of rays through each pixel
     double focus_dist = 10;    // Distance from camera lookfrom point to plane of perfect focus
@@ -65,9 +65,9 @@ class camera {
     double pixel_samples_scale;  // Color scale factor for a sum of pixel samples
     point3 center;         // Camera center
     point3 pixel00_loc;    // Location of pixel 0, 0
-    vec3   pixel_delta_u;  // Offset to pixel to the right
-    vec3   pixel_delta_v;  // Offset to pixel below
-    vec3   u, v, w;              // Camera frame basis vectors
+    vec3   pixel_delta_u;  // Offset the pixel a la derecha
+    vec3   pixel_delta_v;  // Offset the pixel abajo
+    vec3   u, v, w;              // Camera frame vectors
     vec3   defocus_disk_u;       // Defocus disk horizontal radius
     vec3   defocus_disk_v;       // Defocus disk vertical radiusZ   
 
@@ -123,20 +123,22 @@ class camera {
                           + ((i + offset.x()) * pixel_delta_u)
                           + ((j + offset.y()) * pixel_delta_v);
 
-        //Determina el punto de origen de los rayos (puede centrado en el lente o movido para crear depth of field)
+        //Determina el punto de origen de los rayos (puede centrado en el lente o movido para crear percepcion de profundidad)
         auto ray_origin = (defocus_angle <= 0) ? center : defocus_disk_sample();
         auto ray_direction = pixel_sample - ray_origin;
+
+        //Para vectores en movimiento, tiempo en pasar de posicion 1 a posicion 2
         auto ray_time = random_double();
 
         return ray(ray_origin, ray_direction, ray_time);
     }
 
     vec3 sample_square() const {
-        // Returns the vector to a random point in the [-.5,-.5]-[+.5,+.5] unit square.
+        // Retorna un punto aleatorio (+- 0.5 del origen) dentro del cuadrado unitario centrado en el origen
         return vec3(random_double() - 0.5, random_double() - 0.5, 0);
     }
 
-    //Genera un punto random dentro del circuclo que representa el lente de la camara
+    //Genera un punto random dentro del circulo que representa el lente de la camara
     point3 defocus_disk_sample() const {
         auto p = random_in_unit_disk();
         return center + (p[0] * defocus_disk_u) + (p[1] * defocus_disk_v);
@@ -158,10 +160,13 @@ class camera {
         color attenuation;
         color color_from_emission = rec.mat->emitted(rec.u, rec.v, rec.p);
 
+        //Si no hay rebote de luz, solo se considera la emision del material        
         if (!rec.mat->scatter(r, rec, attenuation, scattered))
             return color_from_emission;
 
+        //Calcula color resultante del rebote de luz
         color color_from_scatter = attenuation * ray_color(scattered, depth-1, world);
+
 
         return color_from_emission + color_from_scatter;
     }
